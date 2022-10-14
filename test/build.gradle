@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:4.5.0'
+    implementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.5.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0'
+    implementation 'org.testng:testng:7.6.1'
+}
+
+test {
+    useTestNG()
+    testLogging {
+        showStackTraces = true
+        exceptionFormat = 'full'
+    }
+}
