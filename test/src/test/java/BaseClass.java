@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class BaseClass {
 
     private static final String WEBDRIVER_CHROME_DRIVER = "webdriver.chrome.driver";
-    private static final String RESOURCES_DRIVER_CHROMEDRIVER = "resources/driver/chromedriver";
+    private static final String RESOURCES_DRIVER_CHROMEDRIVER = "resources/driver/chromedriver.exe";
     private static final Boolean isHeadless = true;
     protected ArrayList<WebDriver> webDriverList;
 
@@ -31,6 +31,7 @@ public class BaseClass {
         return result;
     }
 
+    @AfterClass
     public void closeWebdriver() {
         for (WebDriver driver:  webDriverList) {
             driver.close();
