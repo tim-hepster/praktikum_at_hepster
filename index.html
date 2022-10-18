@@ -107,7 +107,7 @@
 <button class="button" onclick="goFurtherButton()">Sign UP
     <script>
         function goFurtherButton() {
-            if (document.getElementById("emailInput").value.length === '0') {
+            if ((document.getElementById("emailInput").value.length === '0')||(document.getElementById("passwordInput").value.length === '0')) {
                 alert("Fill out Email field");
                 document.getElementById("emailInput").style.borderColor = "red";
             } else if (checkEmail()) {
