@@ -8,7 +8,9 @@
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"/>
 </head>
-<head> <h1><p style="font-family:Noto Serif Display">My World</p></h1></head>
+<head>
+    <h1><p style="font-family:Noto Serif Display">My World</p></h1>
+</head>
 <body>
 <nav class="navbar navbar-expand-lg bg-light shadow-lg">
     <div class="container-fluid shadow-lg p-3 mb-5 bg-body rounded">
@@ -43,7 +45,8 @@
                     <a class="nav-link disabled">Disabled</a>
                 </li>
             </ul>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -53,16 +56,22 @@
                         <a class="nav-link active" aria-current="page" href="#">Sign Up</a>
                     </li>
                 </ul>
-                </div>
+            </div>
         </div>
     </div>
 </nav>
 
-<div class><h2><p style="font-family:Noto Serif Display">SIGN UP</p></h2></div>
+<div class>
+    <h2><p style="font-family:Noto Serif Display">SIGN UP</p></h2>
+</div>
 <div class="form-group shadow-lg p-3 mb-5 bg-body rounded">
-    <label for="emailInput"><h3><p style="font-family:Noto Serif Display">Email</p></h3></label>
+    <label for="emailInput">
+        <h3><p style="font-family:Noto Serif Display">Email</p></h3>
+    </label>
     <input type="email" class="form-control" id="emailInput" placeholder="Email">
-    <label for="passwordInput"><h3><p style="font-family:Noto Serif Display">Password</p></H3></label>
+    <label for="passwordInput">
+        <h3><p style="font-family:Noto Serif Display">Password</p></H3>
+    </label>
     <input type="password" class="form-control" id="passwordInput" placeholder="Password">
 
 </div>
@@ -72,39 +81,48 @@
 
 <meta name="viewpoint" content="width=device-width, initial-scale=1">
 <style>
-.button {
-  padding: 15px 25px;
-  font-size: 24px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #04AA6D;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
+    .button {
+        padding: 15px 25px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #04AA6D;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+    }
 
-.button:hover {background-color: #3e8e41}
+    .button:hover {
+        background-color: #3e8e41
+    }
 
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
+    .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
 </style>
 <button class="button" onclick="goFurtherButton()">Sign UP
     <script>
         function goFurtherButton() {
-            if (document.getElementById("emailInput").value.length == '0') {
+            if (document.getElementById("emailInput").value.length === '0') {
                 alert("Fill out Email field");
                 document.getElementById("emailInput").style.borderColor = "red";
-            } else if {
-                location.href="nutzungsbedingungen.html";
+            } else if (checkEmail()) {
+                location.href = "nutzungsbedingungen.html";
             } else {
             }
         }
 
+        function checkEmail() {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("emailInput").value)) {
+                return true
+            }
+            alert("You have entered an invalid email address!")
+            return false
+        }
 
 
     </script>
