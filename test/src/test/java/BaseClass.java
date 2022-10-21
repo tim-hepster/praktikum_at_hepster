@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public class BaseClass {
 
     private static final String WEBDRIVER_CHROME_DRIVER = "webdriver.chrome.driver";
-    private static final String RESOURCES_DRIVER_CHROMEDRIVER = "resources/driver/chromedriver.exe";
-    private static final Boolean isHeadless = true;
+    private static final String RESOURCES_DRIVER_CHROMEDRIVER = "C:\\Users\\LeonieEwald\\repo\\praktikum_at_hepster\\resources\\driver\\chromedriver.exe";
+    private static final boolean isHeadless = false;
     protected ArrayList<WebDriver> webDriverList;
 
     public BaseClass() {
